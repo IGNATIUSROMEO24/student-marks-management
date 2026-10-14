@@ -1,0 +1,105 @@
+*{
+    box-sizing:border-box
+}
+
+body{
+    margin:0;background:#f4f6fb;color:#172033;
+    font:16px/1.5 Arial,sans-serif
+}
+header{
+    padding:42px max(20px,calc((100% - 960px)/2));
+    background:linear-gradient(120deg,#182b61,#3157d5);
+    color:white}h1{font-size:clamp(1.8rem,4vw,2.7rem);
+    line-height:1.15;
+    margin:0 0 10px
+}
+.eyebrow{
+    font-size:.75rem;
+    letter-spacing:.16em;
+    font-weight:bold
+}
+.hero p,header p:last-child{
+    margin-bottom:0
+}
+main
+{
+    width:min(960px,calc(100% - 32px));
+    margin:-20px auto 28px}
+.panel, .stats article{
+    background:white;
+    border:1px solid #e2e7f0;
+    border-radius:15px;
+    padding:22px;
+    margin-bottom:17px;
+    box-shadow:0 8px 24px #14234b0c}
+    
+h2{
+    font-size:1.2rem;margin:0 0 14px
+}
+
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr auto;
+    gap:8px 12px;
+    align-items:end
+}
+label{
+    font-weight:bold;
+    font-size:.9rem}
+    input{
+    width:100%;
+    min-height:44px;
+    border:1px solid #cfd6e4;
+    border-radius:8px;
+    padding:10px;
+    font-size:1rem}
+    form label{
+        grid-row:1}
+        form input{grid-row:2}
+        form button{grid-column:3;grid-row:2}
+        button{border:0;border-radius:8px;padding:12px 15px;min-height:42px;background:#3157d5;color:white;font-weight:bold;cursor:pointer}
+        button:hover{filter:brightness(.95)}
+        #message{grid-column:1/-1;margin:0;color:#a51d2d;min-height:1em}
+        .stats{display:grid;grid-template-columns:repeat(4,1fr);
+            gap:12px}
+            .stats article{
+                display:flex;flex-direction:column;gap:6px}
+                .stats span,.heading p,.note{
+                    color:#687386;font-size:.88rem}
+                    .stats strong
+                    {font-size:1.8rem}
+                    .heading{
+                        display:flex;justify-content:space-between;
+                        align-items:center;
+                        gap:12px}
+                .heading h2{
+                    margin-bottom:2px}
+                    .heading p{
+                        margin-top:0}
+                        .secondary{
+                            background:#eef1fa;color:#26365f}
+                            .scroll{overflow-x:auto}
+                            table{
+                                width:100%;border-collapse:collapse;
+                                text-align:left}th,td{padding:11px 9px;
+                                border-bottom:1px solid #e4e8f0}
+                                th{font-size:.8rem;color:#687386;
+                                text-transform:uppercase}
+                                .empty{text-align:center;
+                                color:#687386;padding:25px}
+                                .grade{background:#edf2ff;
+                                color:#2948a8;
+                                border-radius:20px;
+                                padding:3px 9px;
+                                font-size:.82rem}
+                    .delete{background:#fff0f0;color:#a51d2d;padding:7px 10px;min-height:32px}
+                    .export{margin-top:15px;background:#eaf0ff;color:#2547b7}
+                    .note{padding:0 3px}footer{text-align:center;color:#687386;font-size:.85rem;padding:20px}
+                    @media(max-width:680px){form{grid-template-columns:1fr}
+                    form label,form input,form button
+                    {grid-column:1;grid-row:auto}
+                    .stats{grid-template-columns:repeat(2,1fr)
+                    }
+                    .panel{
+                        padding:17px
+                    }}

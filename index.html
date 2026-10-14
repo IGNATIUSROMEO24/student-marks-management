@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Student Marks Management System</title>
+        <link rel="stylesheet" href="style.css"></head>
+    <body>
+        <header>
+            <p class="eyebrow">ACADEMIC TOOL</p>
+            <h1>Student Marks Management System</h1>
+            <p>Enter marks and calculate class results in one place.</p>
+            </header>
+            <main>
+            <section class="panel">
+                <h2>Add student mark</h2>
+                <form id="form">
+                    <label for="name">Student name</label>
+                    <input id="name" required placeholder="e.g. Ama Mensah">
+                    <label for="mark">Mark (0–100)</label>
+                    <input id="mark" type="number" min="0" max="100" step=".1" required placeholder="e.g. 78">
+                    <button>Add mark</button>
+                    <p id="message" role="status"></p>
+                </form>
+            </section>
+            <section class="stats">
+                <article>
+                    <span>Total students</span>
+                        <strong id="count">0</strong>   
+                    </article>
+                    <article>
+                        <span>Class average</span>
+                        <strong id="average">—</strong>
+                    </article>
+                    <article>
+                        <span>Highest mark</span>
+                        <strong id="highest">—</strong>
+                    </article>
+                    <article>
+                        <span>Lowest mark</span>
+                        <strong id="lowest">—</strong>
+                    </article>
+                </section>
+            <section class="panel">
+                <div class="heading">
+                    <div>
+                        <h2>Class marks</h2>
+                        <p>Entries are saved in this browser on this device.</p>
+                    </div>
+                    <button id="clear" class="secondary" type="button">Clear all</button>
+                </div>
+                <div class="scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Student</th>
+                                <th>Mark</th>
+                                <th>Grade</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rows">
+                    
+                        </tbody>
+                    </table>
+                </div>
+                <button id="export" class="export" type="button">Export results as CSV</button>
+            </section>
+            <p class="note">Learning project only. This is not a replacement for an official school records system.
+
+        </main>
+            <footer>Arrays in practice · Student Marks Management System</footer>
+            <script src="script.js"></script>
+        </body>
+        </html>
+
+
